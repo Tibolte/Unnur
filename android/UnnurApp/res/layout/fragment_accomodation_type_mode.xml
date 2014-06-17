@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@drawable/background_translucid_white_bg"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+        <!-- List -->
+        <ListView
+                android:id="@android:id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:dividerHeight="0dp"
+                android:divider="#ffffff"
+                android:clickable="true"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:listSelector="@drawable/statelist_search"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:smoothScrollbar="true"
+                />
+
+        <TextView
+                android:id="@+id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                />
+
+        <ImageView
+                android:id="@+id/no_photo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+
+    <!-- Main colors -->
+    <color name="blue_main">#4bc1d2</color>
+    <color name="green_main">#8fc249</color>
+    <color name="grey_main">#6b6b6b</color>
+    <color name="orange_button">#ffb32f</color>
+
+    <!-- Labels -->
+    <color name="label_grey">#898e91</color>
+
+    <!-- Alerts -->
+    <color name="sticky">#ffffcd5a</color>
+
+    <!-- debug -->
+    <color name="red_debug">#e60002</color>
+
+    <!-- Holo colors -->
+    <color name="red_holo">#c00</color>
+    <color name="blue_holo">#09c</color>
+    <color name="violet_holo">#93c</color>
+    <color name="green_holo">#690</color>
+    <color name="orange_holo">#f80</color>
+    <color name="green_sea_holo">#33ffb7</color>
+
+</resources>

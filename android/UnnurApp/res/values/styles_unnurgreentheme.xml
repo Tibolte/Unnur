@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="EditTextUnnurGreenTheme" parent="android:Widget.EditText">
+	  <item name="android:background">@drawable/unnurgreentheme_edit_text_holo_light</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="AutoCompleteTextViewUnnurGreenTheme" parent="android:Widget.AutoCompleteTextView">
+      <item name="android:dropDownSelector">@drawable/unnurgreentheme_list_selector_holo_light</item>
+	  <item name="android:background">@drawable/unnurgreentheme_edit_text_holo_light</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="CheckBoxUnnurGreenTheme" parent="android:Widget.CompoundButton.CheckBox">
+      <item name="android:button">@drawable/unnurgreentheme_btn_check_holo_light</item>
+  </style>
+
+  <style name="RadioButtonUnnurGreenTheme" parent="android:Widget.CompoundButton.RadioButton">
+      <item name="android:button">@drawable/unnurgreentheme_btn_radio_holo_light</item>
+  </style>
+
+  <style name="ButtonUnnurGreenTheme" parent="android:Widget.Button">
+	  <item name="android:background">@drawable/unnurgreentheme_btn_default_holo_light</item>
+	  <item name="android:minHeight">48dip</item>
+	  <item name="android:minWidth">64dip</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="ImageButtonUnnurGreenTheme" parent="android:Widget.ImageButton">
+	  <item name="android:background">@drawable/unnurgreentheme_btn_default_holo_light</item>
+  </style>
+
+  <style name="SpinnerUnnurGreenTheme" parent="android:Widget.Spinner">
+      <item name="android:background">@drawable/unnurgreentheme_spinner_background_holo_light</item>
+      <item name="android:dropDownSelector">@drawable/unnurgreentheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="SpinnerDropDownItemUnnurGreenTheme" parent="android:Widget.DropDownItem.Spinner">
+      <item name="android:checkMark">@drawable/unnurgreentheme_btn_radio_holo_light</item>
+  </style>
+  <style name="ProgressBarUnnurGreenTheme" parent="android:Widget.ProgressBar.Horizontal">
+      <item name="android:progressDrawable">@drawable/unnurgreentheme_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/unnurgreentheme_progress_indeterminate_horizontal_holo_light</item>
+      <item name="android:minHeight">16dip</item>
+      <item name="android:maxHeight">16dip</item>
+  </style>
+
+  <style name="SeekBarUnnurGreenTheme" parent="android:Widget.SeekBar">
+      <item name="android:progressDrawable">@drawable/unnurgreentheme_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/unnurgreentheme_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:minHeight">13dip</item>
+      <item name="android:maxHeight">13dip</item>
+      <item name="android:thumb">@drawable/unnurgreentheme_scrubber_control_selector_holo_light</item>
+      <item name="android:thumbOffset">16dip</item>
+      <item name="android:paddingLeft">16dip</item>
+      <item name="android:paddingRight">16dip</item>
+  </style>
+
+  <style name="RatingBarUnnurGreenTheme" parent="android:Widget.RatingBar">
+      <item name="android:progressDrawable">@drawable/unnurgreentheme_ratingbar_full_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/unnurgreentheme_ratingbar_full_holo_light</item>
+  </style>
+
+  <style name="RatingBarBigUnnurGreenTheme">
+      <item name="android:progressDrawable">@drawable/unnurgreentheme_ratingbar_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/unnurgreentheme_ratingbar_holo_light</item>
+      <item name="android:minHeight">35dip</item>
+      <item name="android:maxHeight">35dip</item>
+  </style>
+
+  <style name="RatingBarSmallUnnurGreenTheme">
+      <item name="android:progressDrawable">@drawable/unnurgreentheme_ratingbar_small_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/unnurgreentheme_ratingbar_small_holo_light</item>
+      <item name="android:minHeight">16dip</item>
+      <item name="android:maxHeight">16dip</item>
+  </style>
+
+  <style name="ToggleUnnurGreenTheme" parent="android:Widget.Button.Toggle">
+      <item name="android:background">@drawable/unnurgreentheme_btn_toggle_holo_light</item>
+      <item name="android:minHeight">48dip</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="ListViewUnnurGreenTheme" parent="android:Widget.ListView">
+      <item name="android:listSelector">@drawable/unnurgreentheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="ListViewUnnurGreenTheme.White" parent="android:Widget.ListView.White">
+      <item name="android:listSelector">@drawable/unnurgreentheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="SpinnerItemUnnurGreenTheme" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+      <item name="android:textColor">#000000</item>
+  </style>
+
+</resources>

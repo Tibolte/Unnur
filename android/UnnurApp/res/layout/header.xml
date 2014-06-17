@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green_main"
+                android:id="@+id/header"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+        >
+
+    <ImageButton
+            android:id="@+id/btn_menuback"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:onClick="onClickMenu"
+            android:src="@drawable/btn_header"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:background="@null"
+            />
+
+    <TextView
+            android:id="@+id/textheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Restaurant"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="2dp"
+            />
+
+    <ImageButton
+            android:id="@+id/btn_right"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+</RelativeLayout>

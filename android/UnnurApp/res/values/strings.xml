@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unnur</string>
+
+    <!-- Navigation drawer -->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="API_KEY">AIzaSyB_xoPdXNc2IsO5IzkfTX47AgMjAIKeoao</string>
+
+    <!-- Header titles -->
+    <string name="accomodations">Fasteign</string>
+    <string name="favorites">Favorites</string>
+    <string name="search">Leita</string>
+    <string name="watches">Vaktin mín</string>
+
+    <!-- Search -->
+    <string name="search_region">Svæði</string>
+    <string name="search_category">Tegund</string>
+    <string name="empty_area">Please select at least an area</string>
+    <string name="empty_category">Please select at least a category</string>
+
+
+    <!-- Debug -->
+    <string name="debug_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+</resources>
