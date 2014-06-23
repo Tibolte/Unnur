@@ -5,4 +5,9 @@
 
     <dimen name="circle_diameter">100dp</dimen>
     <dimen name="margin_mode_container">5dp</dimen>
+
+    <!-- seek bars -->
+    <dimen name="seek_bar_room_margin_left">20dp</dimen>
+    <dimen name="seek_bar_size_margin_left">20dp</dimen>
+
 </resources>

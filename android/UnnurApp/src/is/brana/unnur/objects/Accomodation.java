@@ -108,7 +108,7 @@ public class Accomodation implements Parcelable{
     }
 
     public int getRoomSize() {
-        return roomCount;
+        return this.roomCount;
     }
 
     public void setRoomSize(int roomSize) {
@@ -254,7 +254,7 @@ public class Accomodation implements Parcelable{
 
         id = inBundle.getLong("id");
         squareSize = inBundle.getInt("squareSize");
-        roomCount = inBundle.getInt("roomcount");
+        roomCount = inBundle.getInt("roomCount");
         value = inBundle.getInt("value");
         street = inBundle.getString("street");
         zipCode = inBundle.getInt("zipCode");

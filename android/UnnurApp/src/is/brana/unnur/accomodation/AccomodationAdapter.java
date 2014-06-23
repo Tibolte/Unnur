@@ -117,6 +117,7 @@ public class AccomodationAdapter extends ArrayAdapter<Accomodation> {
                 imageClick.onClick(accomodation);
             }
         });
+
     }
 
     public static class ViewHolder

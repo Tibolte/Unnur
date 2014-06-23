@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import is.brana.unnur.R;
+import is.brana.unnur.interfaces.LocationDetailImageClick;
 import is.brana.unnur.objects.Accomodation;
 import is.brana.unnur.utils.Utils;
 
@@ -21,12 +23,14 @@ public class SearchResultAdapter extends ArrayAdapter<Accomodation> {
 
     private ArrayList<Accomodation> items;
     private Context context;
+    private LocationDetailImageClick locationDetailImageClick;
 
-    public SearchResultAdapter(Context context, int textViewResourceId, ArrayList<Accomodation> items)
+    public SearchResultAdapter(Context context, int textViewResourceId, ArrayList<Accomodation> items, LocationDetailImageClick locationDetailImageClick)
     {
         super(context, textViewResourceId, items);
         this.items = items;
         this.context = context;
+        this.locationDetailImageClick = locationDetailImageClick;
     }
 
     @Override
@@ -55,9 +59,9 @@ public class SearchResultAdapter extends ArrayAdapter<Accomodation> {
         LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = vi.inflate(R.layout.accomodation_search_item, null);
 
-
         ViewHolder holder = new ViewHolder();
 
+        holder.background = (LinearLayout) v.findViewById(R.id.background);
         holder.image = (ImageView) v.findViewById(R.id.img_location);
         holder.txtPrice = (TextView) v.findViewById(R.id.txtPrice);
         holder.txtStreet = (TextView) v.findViewById(R.id.txtStreet);
@@ -100,10 +104,18 @@ public class SearchResultAdapter extends ArrayAdapter<Accomodation> {
         {
             holder.image.setImageDrawable(context.getResources().getDrawable(R.drawable.placeholder_house));
         }
+
+        holder.background.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                locationDetailImageClick.onClick(accomodation);
+            }
+        });
     }
 
     public static class ViewHolder
     {
+        public LinearLayout background;
         public ImageView image;
         public TextView txtPrice;
         public TextView txtStreet;

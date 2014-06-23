@@ -6,192 +6,206 @@
               android:background="@drawable/background_translucid"
               android:layout_height="match_parent">
 
-    <!-- Price slider -->
-
+    <!-- Sliders container -->
     <LinearLayout
+            android:id="@+id/sliderContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-        <TextView
-                android:id="@+id/txtPriceTitle"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textSize="18dp"
-                android:textColor="@color/label_grey"
-                android:text="Leiga"/>
-
+        <!-- Price slider -->
 
         <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/txtPriceTitle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/label_grey"
+                    android:text="Leiga"/>
 
 
-            <RelativeLayout
+            <LinearLayout
+                    android:id="@+id/rangePriceContainer"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
 
-                <TextView
-                        android:id="@+id/txtPriceMin"
+
+                <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/label_grey"
-                        android:text="0 kr."
-                        android:layout_marginLeft="20dp"
-                        android:layout_alignParentLeft="true"/>
+                        android:layout_height="wrap_content">
 
-                <TextView
-                        android:id="@+id/txtPriceMax"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/label_grey"
-                        android:layout_marginRight="20dp"
-                        android:text="500.000 kr."
-                        android:layout_alignParentRight="true"/>
+                    <TextView
+                            android:id="@+id/txtPriceMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/label_grey"
+                            android:text="0 kr."
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentLeft="true"/>
 
-            </RelativeLayout>
+                    <TextView
+                            android:id="@+id/txtPriceMax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/label_grey"
+                            android:layout_marginRight="20dp"
+                            android:text="500.000 kr."
+                            android:layout_alignParentRight="true"/>
 
-            <SeekBar android:id="@+id/seekBarPrice"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginLeft="20dp"
-                     android:max="500000">
-            </SeekBar>
+                </RelativeLayout>
+
+                <!--<SeekBar android:id="@+id/seekBarPrice"-->
+                         <!--android:layout_width="match_parent"-->
+                         <!--android:layout_height="wrap_content"-->
+                         <!--android:layout_marginLeft="20dp"-->
+                         <!--android:max="500000">-->
+                <!--</SeekBar>-->
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <!-- Size slider -->
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-        <TextView
-                android:id="@+id/txtSizeTitle"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textSize="18dp"
-                android:textColor="@color/label_grey"
-                android:text="Stærð"/>
-
+        <!-- Size slider -->
 
         <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/txtSizeTitle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/label_grey"
+                    android:text="Stærð"/>
 
 
-            <RelativeLayout
+            <LinearLayout
+                    android:id="@+id/rangeSizeContainer"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
 
-                <TextView
-                        android:id="@+id/txtSizeMin"
+
+                <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/label_grey"
-                        android:text="0 m2"
-                        android:layout_marginLeft="20dp"
-                        android:layout_alignParentLeft="true"/>
+                        android:layout_height="wrap_content">
 
-                <TextView
-                        android:id="@+id/txtSizeMax"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/label_grey"
-                        android:layout_marginRight="20dp"
-                        android:text="2000 m2"
-                        android:layout_alignParentRight="true"/>
+                    <TextView
+                            android:id="@+id/txtSizeMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/label_grey"
+                            android:text="0 m2"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentLeft="true"/>
 
-            </RelativeLayout>
+                    <TextView
+                            android:id="@+id/txtSizeMax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/label_grey"
+                            android:layout_marginRight="20dp"
+                            android:text="2000 m2"
+                            android:layout_alignParentRight="true"/>
 
-            <SeekBar android:id="@+id/seekBarSize"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginLeft="20dp"
-                     android:max="2000">
-            </SeekBar>
+                </RelativeLayout>
+
+                <!--<SeekBar android:id="@+id/seekBarSize"-->
+                         <!--android:layout_width="match_parent"-->
+                         <!--android:layout_height="wrap_content"-->
+                         <!--android:layout_marginLeft="20dp"-->
+                         <!--android:max="2000">-->
+                <!--</SeekBar>-->
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <!-- Room slider -->
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-        <TextView
-                android:id="@+id/txtRoomTitle"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textSize="18dp"
-                android:textColor="@color/label_grey"
-                android:text="Herbergi"/>
-
+        <!-- Room slider -->
 
         <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/txtRoomTitle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/label_grey"
+                    android:text="Herbergi"/>
 
 
-            <RelativeLayout
+            <LinearLayout
+                    android:id="@+id/rangeRoomContainer"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
 
-                <TextView
-                        android:id="@+id/txtRoomMin"
+
+                <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/label_grey"
-                        android:text="0 herb."
-                        android:layout_marginLeft="20dp"
-                        android:layout_alignParentLeft="true"/>
+                        android:layout_height="wrap_content">
 
-                <TextView
-                        android:id="@+id/txtRoomMax"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/label_grey"
-                        android:layout_marginRight="20dp"
-                        android:text="10+ herb."
-                        android:layout_alignParentRight="true"/>
+                    <TextView
+                            android:id="@+id/txtRoomMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/label_grey"
+                            android:text="0 herb."
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentLeft="true"/>
 
-            </RelativeLayout>
+                    <TextView
+                            android:id="@+id/txtRoomMax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/label_grey"
+                            android:layout_marginRight="20dp"
+                            android:text="10+ herb."
+                            android:layout_alignParentRight="true"/>
 
-            <SeekBar android:id="@+id/seekBarRoom"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginLeft="20dp"
-                     android:max="10">
-            </SeekBar>
+                </RelativeLayout>
+
+                <!--<SeekBar android:id="@+id/seekBarRoom"-->
+                         <!--android:layout_width="match_parent"-->
+                         <!--android:layout_height="wrap_content"-->
+                         <!--android:layout_marginLeft="20dp"-->
+                         <!--android:max="10">-->
+                <!--</SeekBar>-->
+
+            </LinearLayout>
 
         </LinearLayout>
+
 
     </LinearLayout>
 

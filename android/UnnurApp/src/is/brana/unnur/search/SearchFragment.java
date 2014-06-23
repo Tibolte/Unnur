@@ -461,19 +461,19 @@ public class SearchFragment extends Fragment implements EditAreaTouchListener, E
 
         //PRICE MIN
         //TODO: make it possible with slider
-        String priceMinString = "0";
+        String priceMinString = editFieldFragment.getMinPrice();
 
         //PRICE MAX
         String priceMaxString = editFieldFragment.getMaxPrice();
 
         //SIZE MIN
-        String sizeMinString = "0";
+        String sizeMinString = editFieldFragment.getMinSquareSize();
 
         //SIZE MAX
         String sizeMaxString = editFieldFragment.getMaxSquareSize();
 
         //ROOM MIN
-        String roomMinString = "0";
+        String roomMinString = editFieldFragment.getMinRoom();
 
         //ROOM MAX
         String roomMaxString = editFieldFragment.getMaxRoom();
