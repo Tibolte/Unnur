@@ -2,13 +2,14 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:background="@color/white"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="10dp">
 
         <ImageView
@@ -48,13 +49,70 @@
 
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
 
                 <TextView
                         android:id="@+id/txtRoomSize"
                         android:layout_width="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="5 herb"/>
+
+                <TextView
+                        android:id="@+id/txtSeparator1"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="12dp"
+                        android:layout_marginRight="5dp"
+                        android:text="|"/>
+
+                <TextView
+                        android:id="@+id/txtSquareSize"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:layout_height="wrap_content"
+                        android:text="100 fm"/>
+
+                <TextView
+                        android:id="@+id/txtSeparator2"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="|"/>
+
+                <TextView
+                        android:id="@+id/txtLongTerm"
+                        android:layout_width="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Leigutimi"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    >
+
+                <TextView
+                        android:id="@+id/txtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:textColor="@color/label_grey"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="10dp"
+                        android:lines="2"
+                        android:ellipsize="end"
+                        android:text="@string/debug_description"/>
 
             </LinearLayout>
 

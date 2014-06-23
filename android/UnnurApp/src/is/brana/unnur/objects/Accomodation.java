@@ -195,6 +195,18 @@ public class Accomodation implements Parcelable{
         this.images = images;
     }
 
+    public String getLongTerm()
+    {
+        if(isLongTerm())
+        {
+            return "Langtíma";
+        }
+        else
+        {
+            return "Skammtíma";
+        }
+    }
+
     public static final Parcelable.Creator<Accomodation> CREATOR
             = new Parcelable.Creator<Accomodation>()
     {

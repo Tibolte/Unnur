@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 import is.brana.unnur.R;
 import is.brana.unnur.objects.Accomodation;
 import is.brana.unnur.objects.gui.HeaderHolder;
@@ -33,6 +34,12 @@ public class SearchResultActivity extends Activity {
             accomodations = getIntent().getExtras().getParcelableArrayList(Keys.KEY_ACCOMODATIONS);
 
             Log.d(TAG, accomodations.toString());
+
+            ListView listView = (ListView) findViewById(android.R.id.list);
+
+            SearchResultAdapter searchResultAdapter = new SearchResultAdapter(this, R.layout.accomodation_search_item, accomodations);
+
+            listView.setAdapter(searchResultAdapter);
         }
     }
 
