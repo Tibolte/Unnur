@@ -5,6 +5,8 @@ package is.brana.unnur.utils;
  */
 public class Keys {
 
+    public static final String APP_PREFERENCES                      = "UnnurSharedPreferences";
+
     public static final String KEY_ID            = "id";
     public static final String KEY_REGION        = "name";
     public static final String KEY_ADDRESS       = "name";

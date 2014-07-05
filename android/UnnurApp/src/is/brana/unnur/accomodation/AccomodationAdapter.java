@@ -1,5 +1,6 @@
 package is.brana.unnur.accomodation;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import is.brana.unnur.R;
 import is.brana.unnur.interfaces.LocationDetailImageClick;
 import is.brana.unnur.objects.Accomodation;
 import is.brana.unnur.objects.Image;
+import is.brana.unnur.usersession.UserSession;
 import is.brana.unnur.utils.Utils;
 
 import java.util.ArrayList;
@@ -60,10 +62,11 @@ public class AccomodationAdapter extends ArrayAdapter<Accomodation> {
     private View initView()
     {
         LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = vi.inflate(R.layout.accomodation_item, null);
+        final View v = vi.inflate(R.layout.accomodation_item, null);
 
         ViewHolder holder = new ViewHolder();
         holder.image = (ImageView)v.findViewById(R.id.img_location);
+        holder.imgStar = (ImageView)v.findViewById(R.id.img_star);
         holder.txtRegion = (TextView)v.findViewById(R.id.txtRegion);
         holder.txtAddress = (TextView)v.findViewById(R.id.txtAddress);
         holder.txtRoomSize = (TextView)v.findViewById(R.id.txtRoomSize);
@@ -92,7 +95,7 @@ public class AccomodationAdapter extends ArrayAdapter<Accomodation> {
     {
         final Accomodation accomodation = items.get(position);
 
-        ViewHolder holder = (ViewHolder) v.getTag();
+        final ViewHolder holder = (ViewHolder) v.getTag();
 
         holder.txtRegion.setText(accomodation.getRegion() +" ");
         holder.txtAddress.setText(accomodation.getAddress());
@@ -118,11 +121,37 @@ public class AccomodationAdapter extends ArrayAdapter<Accomodation> {
             }
         });
 
+        if(UserSession.activeSession((Activity) context).getFavorites().contains(accomodation.getId()))
+        {
+            holder.imgStar.setImageDrawable(context.getResources().getDrawable(R.drawable.star_full));
+        }
+        else
+        {
+            holder.imgStar.setImageDrawable(context.getResources().getDrawable(R.drawable.star_empty));
+        }
+
+
+        holder.imgStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(holder.imgStar.getDrawable().getConstantState().equals(context.getResources().getDrawable(R.drawable.star_empty).getConstantState()))
+                {
+                    holder.imgStar.setImageDrawable(context.getResources().getDrawable(R.drawable.star_full));
+                    UserSession.activeSession((Activity) context).addFavorite(accomodation.getId());
+                }
+                else
+                {
+                    holder.imgStar.setImageDrawable(context.getResources().getDrawable(R.drawable.star_empty));
+                    UserSession.activeSession((Activity) context).removeFavorite(accomodation.getId());
+                }
+            }
+        });
     }
 
     public static class ViewHolder
     {
         public ImageView image;
+        public ImageView imgStar;
         public TextView txtRegion;
         public TextView txtAddress;
         public TextView txtRoomSize;

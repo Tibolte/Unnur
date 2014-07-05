@@ -27,6 +27,17 @@
                     android:background="@color/white"
                     />
 
+            <ImageView
+                    android:id="@+id/img_star"
+                    android:layout_height="33dp"
+                    android:layout_width="35dp"
+                    android:src="@drawable/star_empty"
+                    android:layout_alignTop="@+id/img_location"
+                    android:layout_alignLeft="@id/img_location"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+
             <RelativeLayout
                     android:id="@+id/item_footer"
                     android:layout_width="match_parent"
