@@ -263,7 +263,7 @@ public class ListBaseDetailAdapter extends BaseAdapter {
                             for(Image image: images)
                             {
                                 KenBurnsView img = new KenBurnsView(context);
-                                img.setScaleType(ImageView.ScaleType.FIT_XY);
+                                //img.setScaleType(ImageView.ScaleType.FIT_XY);
                                 img.setLayoutParams(firstCellHolder.swipeView.getLayoutParams());
 
                                 firstCellHolder.swipeView.addView(img);
