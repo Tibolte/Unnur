@@ -12,7 +12,6 @@ public class RestRepository implements Repository {
 
     private final UnnurApi mUnnurApi;
 
-    //TODO: inject this RestRepository, don't want to create ourselves
     public RestRepository(){
 
         RestAdapter unnurAPIRest = new RestAdapter.Builder()
