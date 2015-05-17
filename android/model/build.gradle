@@ -10,4 +10,6 @@ apply plugin: 'java'
 dependencies {
     compile project(':common')
     compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'io.reactivex:rxjava:1.0.0'
+    compile 'io.reactivex:rxandroid:0.24.0'
 }
