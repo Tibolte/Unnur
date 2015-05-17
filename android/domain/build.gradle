@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+/**
+ * The domain module hosts usecases and their implementations,
+ * it is the business logic of the application.
+ *
+ * This module is totally independent of the Android framework.
+ */
+
+dependencies {
+    compile project (':common')
+    compile project (':model')
+}

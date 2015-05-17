@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+/**
+ * The model module is responsible for managing the information,
+ * select, save, delete etc...
+ *
+ * It also implements entities
+ */
+
+dependencies {
+    compile project(':common')
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+}

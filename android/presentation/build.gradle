@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+/**
+ * The presentation module is the Android application itself, with its resources, assets, logic etc...
+ * It also interact with the domain by running the usecases.
+ *
+ * In this module there are presenters and views.
+ */
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "is.brana.unnur"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':domain')
+
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.jakewharton:butterknife:6.1.0'
+}

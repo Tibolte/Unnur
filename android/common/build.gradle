@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+/**
+ * This module hosts the provider for the UI and REST bus,
+ * and also common constants
+ */
+
+dependencies {
+    compile 'com.squareup:otto:1.3.5'
+}
