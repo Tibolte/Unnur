@@ -1,11 +1,15 @@
 package is.brana.unnur.mvp.views;
 
+import java.util.List;
+
+import is.brana.model.entities.Accomodation;
+
 /**
  * Created by thibaultguegan on 17/05/15.
  */
 public interface AccomodationsView extends MVPView {
 
-    //TODO: add actions relation to showing/appending accomodations
+    void showAccomodationList(List<Accomodation> accomodationList);
 
     void showLoading ();
 
@@ -17,4 +21,5 @@ public interface AccomodationsView extends MVPView {
 
     boolean isTheListEmpty ();
 
+    void appendAccomodationList(List<Accomodation> accomodationList);
 }

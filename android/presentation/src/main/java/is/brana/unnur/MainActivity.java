@@ -2,23 +2,35 @@ package is.brana.unnur;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import butterknife.InjectView;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import butterknife.ButterKnife;
+import is.brana.model.entities.Accomodation;
+import is.brana.unnur.di.components.DaggerAppComponent;
+import is.brana.unnur.mvp.views.AccomodationsView;
 
 
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener{
+public class MainActivity extends ActionBarActivity implements AccomodationsView {
 
-    @InjectView(R.id.pager) ViewPager mPager;
 
+
+    /**
+     * MARK: Lifecycle methods
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.inject(this);
     }
 
     @Override
@@ -43,19 +55,55 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * MARK: Private methods
+     */
+    private void initializeDependencyInjector() {
+
+        UnnurApp unnurApp = (UnnurApp) getApplication();
+        
+    }
+
+    /**
+     * MARK: AccomodationsView overrides
+     */
     @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void showAccomodationList(List<Accomodation> accomodationList) {
 
     }
 
     @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void showLoading() {
 
     }
 
     @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void hideLoading() {
 
     }
 
+    @Override
+    public void showLoadingLabel() {
+
+    }
+
+    @Override
+    public void hideActionLabel() {
+
+    }
+
+    @Override
+    public boolean isTheListEmpty() {
+        return false;
+    }
+
+    @Override
+    public void appendAccomodationList(List<Accomodation> accomodationList) {
+
+    }
+
+    @Override
+    public Context getContext() {
+        return null;
+    }
 }
