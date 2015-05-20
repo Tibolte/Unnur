@@ -8,6 +8,6 @@ import rx.Subscription;
  */
 public interface Usecase {
 
-    Subscription execute(Subscriber subscriber);
+    void execute();
 
 }

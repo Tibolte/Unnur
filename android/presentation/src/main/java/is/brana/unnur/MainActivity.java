@@ -1,10 +1,7 @@
 package is.brana.unnur;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,13 +12,16 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import is.brana.model.entities.Accomodation;
-import is.brana.unnur.di.components.DaggerAppComponent;
+import is.brana.unnur.di.components.DaggerAccomodationsUsecasesComponent;
+import is.brana.unnur.di.modules.AccomodationsUsecasesModule;
+import is.brana.unnur.mvp.presenters.AccomodationsPresenter;
 import is.brana.unnur.mvp.views.AccomodationsView;
 
 
 public class MainActivity extends ActionBarActivity implements AccomodationsView {
 
-
+    @Inject
+    AccomodationsPresenter mAccomodationspresenter;
 
     /**
      * MARK: Lifecycle methods
@@ -31,6 +31,15 @@ public class MainActivity extends ActionBarActivity implements AccomodationsView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
+
+        initializeDependencyInjector();
+
+    }
+
+    @Override
+    protected void onStart() {
+
+        super.onStart();
     }
 
     @Override
@@ -61,7 +70,12 @@ public class MainActivity extends ActionBarActivity implements AccomodationsView
     private void initializeDependencyInjector() {
 
         UnnurApp unnurApp = (UnnurApp) getApplication();
-        
+
+        DaggerAccomodationsUsecasesComponent.builder()
+                .appComponent(unnurApp.getAppComponent())
+                .accomodationsUsecasesModule(new AccomodationsUsecasesModule())
+                .build().inject(this);
+
     }
 
     /**
@@ -104,6 +118,6 @@ public class MainActivity extends ActionBarActivity implements AccomodationsView
 
     @Override
     public Context getContext() {
-        return null;
+        return this;
     }
 }
