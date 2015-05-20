@@ -34,12 +34,18 @@ public class MainActivity extends ActionBarActivity implements AccomodationsView
 
         initializeDependencyInjector();
 
+        if (savedInstanceState == null) {
+            mAccomodationspresenter.attachView(this);
+        } else {
+            //TODO: recreate from saved instance
+        }
     }
 
     @Override
     protected void onStart() {
 
         super.onStart();
+        mAccomodationspresenter.start();
     }
 
     @Override
@@ -108,7 +114,8 @@ public class MainActivity extends ActionBarActivity implements AccomodationsView
 
     @Override
     public boolean isTheListEmpty() {
-        return false;
+        //TODO: not for now
+        return true;
     }
 
     @Override
