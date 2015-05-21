@@ -5,10 +5,11 @@
 
     <is.brana.unnur.views.custom_views.AutofitRecyclerView
         android:layout_width="match_parent"
-        android:paddingTop="?android:attr/actionBarSize"
-        android:columnWidth="@dimen/item_accomodation_width"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        />
+        android:layout_marginLeft="@dimen/activity_accomodations_margins"
+        android:layout_marginRight="@dimen/activity_accomodations_margins"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:columnWidth="@dimen/item_accomodation_width"
+        android:clipToPadding="false"/>
 
 </FrameLayout>
