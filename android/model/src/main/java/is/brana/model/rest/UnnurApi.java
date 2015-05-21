@@ -1,5 +1,7 @@
 package is.brana.model.rest;
 
+import java.util.List;
+
 import is.brana.model.entities.Accomodation;
 import retrofit.http.GET;
 import retrofit.http.Headers;
@@ -20,6 +22,6 @@ public interface UnnurApi {
     public static final String MAP_URL               = "http://maps.googleapis.com/maps/api/staticmap?center=%s,%s&markers=color:0x8fc249|%s,%s&zoom=16&size=450x450&sensor=false";
 
     @Headers("Content-Type: application/json")
-    @GET("Fasteign/{offset}/{count}")
-    Observable<Accomodation> getAccomodations(@Path("offset") int offset, @Path("count") int count);
+    @GET("/Fasteign/{offset}/{count}")
+    Observable<List<Accomodation>> getAccomodations(@Path("offset") int offset, @Path("count") int count);
 }

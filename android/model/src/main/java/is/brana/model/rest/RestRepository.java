@@ -1,5 +1,7 @@
 package is.brana.model.rest;
 
+import java.util.List;
+
 import is.brana.model.entities.Accomodation;
 import is.brana.model.entities.Repository;
 import retrofit.RestAdapter;
@@ -23,7 +25,7 @@ public class RestRepository implements Repository {
     }
 
     @Override
-    public Observable<Accomodation> getAccomodations(int offset, int count) {
+    public Observable<List<Accomodation>> getAccomodations(int offset, int count) {
         return mUnnurApi.getAccomodations(offset, count);
     }
 }

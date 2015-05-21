@@ -1,135 +1,101 @@
 package is.brana.model.entities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by thibaultguegan on 17/05/15.
  */
 public class Accomodation {
 
-    private Long id;
-    private int squareSize;
-    private int roomCount;
-    private int value;
-    private String street;
-    private int zipCode;
-    private String zipName;
-    private String region;
-    private String municipality;
-    private Long areaId;
-    private String category;
-    private boolean longTerm;
-    private ArrayList<Image> images;
+    private Long FasteignId;
+    private int StaerdFm;
+    private int HerbergiFjoldi;
+    private int Verd;
+    private String Gata;
+    private int Postnumer;
+    private String PostnumerHeiti;
+    private String SvaediHeiti;
+    private String SveitarfelagHeiti;
+    private List<Image> Images;
 
-    public Long getId() {
-        return id;
+    public Long getFasteignId() {
+        return FasteignId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setFasteignId(Long fasteignId) {
+        FasteignId = fasteignId;
     }
 
-    public int getSquareSize() {
-        return squareSize;
+    public int getStaerdFm() {
+        return StaerdFm;
     }
 
-    public void setSquareSize(int squareSize) {
-        this.squareSize = squareSize;
+    public void setStaerdFm(int staerdFm) {
+        StaerdFm = staerdFm;
     }
 
-    public int getRoomSize() {
-        return this.roomCount;
+    public int getHerbergiFjoldi() {
+        return HerbergiFjoldi;
     }
 
-    public void setRoomSize(int roomSize) {
-        this.roomCount = roomSize;
+    public void setHerbergiFjoldi(int herbergiFjoldi) {
+        HerbergiFjoldi = herbergiFjoldi;
     }
 
-    public int getValue() {
-        return value;
+    public int getVerd() {
+        return Verd;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setVerd(int verd) {
+        Verd = verd;
     }
 
-    public String getStreet() {
-        return street;
+    public String getGata() {
+        return Gata;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public void setGata(String gata) {
+        Gata = gata;
     }
 
-    public int getZipCode() {
-        return zipCode;
+    public int getPostnumer() {
+        return Postnumer;
     }
 
-    public void setZipCode(int zipCode) {
-        this.zipCode = zipCode;
+    public void setPostnumer(int postnumer) {
+        Postnumer = postnumer;
     }
 
-    public String getAddress() {
-        return zipName;
+    public String getPostnumerHeiti() {
+        return PostnumerHeiti;
     }
 
-    public void setAddress(String address) {
-        this.zipName = address;
+    public void setPostnumerHeiti(String postnumerHeiti) {
+        PostnumerHeiti = postnumerHeiti;
     }
 
-    public String getRegion() {
-        return region;
+    public String getSvaediHeiti() {
+        return SvaediHeiti;
     }
 
-    public void setRegion(String region) {
-        this.region = region;
+    public void setSvaediHeiti(String svaediHeiti) {
+        SvaediHeiti = svaediHeiti;
     }
 
-    public String getMunicipality() {
-        return municipality;
+    public String getSveitarfelagHeiti() {
+        return SveitarfelagHeiti;
     }
 
-    public void setMunicipality(String municipality) {
-        this.municipality = municipality;
+    public void setSveitarfelagHeiti(String sveitarfelagHeiti) {
+        SveitarfelagHeiti = sveitarfelagHeiti;
     }
 
-    public Long getAreaId() {
-        return areaId;
+    public List<Image> getImages() {
+        return Images;
     }
 
-    public void setAreaId(Long areaId) {
-        this.areaId = areaId;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public boolean isLongTerm() {
-        return longTerm;
-    }
-
-    public void setLongTerm(boolean longTerm) {
-        this.longTerm = longTerm;
-    }
-
-    public ArrayList<Image> getImages() {
-        return images;
-    }
-
-    public void setImages(ArrayList<Image> images) {
-        this.images = images;
-    }
-
-    public String getLongTerm() {
-        if(isLongTerm()) {
-            return "Langtíma";
-        } else {
-            return "Skammtíma";
-        }
+    public void setImages(List<Image> images) {
+        Images = images;
     }
 }

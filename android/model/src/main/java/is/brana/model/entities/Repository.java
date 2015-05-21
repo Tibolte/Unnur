@@ -1,5 +1,7 @@
 package is.brana.model.entities;
 
+import java.util.List;
+
 import rx.Observable;
 
 /**
@@ -7,6 +9,6 @@ import rx.Observable;
  */
 public interface Repository {
 
-    Observable<Accomodation> getAccomodations(final int offset, final int count);
+    Observable<List<Accomodation>> getAccomodations(final int offset, final int count);
 
 }

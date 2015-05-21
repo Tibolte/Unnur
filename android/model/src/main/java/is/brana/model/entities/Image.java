@@ -7,28 +7,32 @@ import is.brana.model.rest.UnnurApi;
  */
 public class Image{
 
-    private Long id;
-    private boolean cropped;
+    private Long Id;
+    private boolean Cropped;
+
+    public Long getId() {
+        return Id;
+    }
 
     public void setId(Long id) {
-        this.id = id;
+        Id = id;
     }
 
     public boolean isCropped() {
-        return cropped;
+        return Cropped;
     }
 
     public void setCropped(boolean cropped) {
-        this.cropped = cropped;
+        Cropped = cropped;
     }
 
     public String getImageUrl(Long accomodationId) {
         String url = "";
 
         if(isCropped()) {
-            url = String.format(UnnurApi.CROPPED_IMAGE, accomodationId, this.id);
+            url = String.format(UnnurApi.CROPPED_IMAGE, accomodationId, this.Id);
         } else {
-            url = String.format(UnnurApi.ORIGINAL_IMAGE, accomodationId, this.id);
+            url = String.format(UnnurApi.ORIGINAL_IMAGE, accomodationId, this.Id);
         }
 
         return url;
