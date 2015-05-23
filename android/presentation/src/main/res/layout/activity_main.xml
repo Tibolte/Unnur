@@ -11,4 +11,12 @@
         android:clipToPadding="false"
         />
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_movies_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/theme_primary"
+        />
+
 </FrameLayout>
